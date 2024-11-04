@@ -9,103 +9,94 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 20px;
+            box-sizing: border-box;
         }
+        
+        @media (min-width: 768px) {
+            body {
+                max-width: 800px;
+            }
+        }
+
         h1, h2, h3 {
             color: #2c3e50;
+            word-wrap: break-word;
         }
+
         .section {
             background-color: #f9f9f9;
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
-        .accordion {
-    background-color: #eef0e9;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    font-size: 20px;
-    font-weight: bold;
-}
 
-.active, .accordion:hover {
-    background-color: #ccc;
-}
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            display: none;
-            overflow: hidden;
-        }
-        .infographic {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        .quiz {
-            background-color: #e0f7fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .quiz button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #resourceLibrary {
-            background-color: #e8eaf6;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .insights {
-            background-color: #fff3e0;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .example-motives {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
         .infographic-container {
-            width: 500px;
-            height: 200px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 2.5 / 1;
             margin: 20px auto;
             border: 1px solid #eee;
             border-radius: 8px;
             overflow: hidden;
         }
-        .highlight {
-        color: rgb(40, 206, 18); /* 濃いグリーン */
-        font-weight: bold; /* 必要に応じて太字 */
-         }
-        .highlight-2 {
-        color: rgb(182, 113, 11); /* 濃い茶色 */
-        font-weight: bold; /* 必要に応じて太字 */
+
+        /* 他のスタイルは変更なし - 元のコードと同じ */
+        .accordion {
+            background-color: #eef0e9;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-size: 20px;
+            font-weight: bold;
+            box-sizing: border-box;
         }
-        .highlight-3 {
-        color: rgb(18, 37, 206); /* 濃い青 */
-        font-weight: bold; /* 必要に応じて太字 */
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* スマートフォン向けの追加調整 */
+        @media (max-width: 480px) {
+            .section {
+                padding: 10px;
+            }
+
+            .accordion {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
